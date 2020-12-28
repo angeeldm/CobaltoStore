@@ -1,0 +1,566 @@
+:root {
+    --colorPrimario: #0E0816;
+    --colorSecundario: #4717F6;
+    --colorTerciario: #e7dfdd;
+    --colorBoton: #A239CA;
+    --fuentePrincipal: 'Oxygen', sans-serif;
+    --fuenteSecundaria: 'Source Sans Pro', sans-serif;
+    --fuenteLogo: 'Taviraj', serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: var(--colorPrimario);
+}
+
+h1 {
+    font-family: var(--fuenteLogo);
+    margin: 0;
+    font-size: 3em;
+    color: var(--colorTerciario);
+}
+
+h2 {
+    margin: 0;
+    color: var(--colorTerciario);
+    text-transform: uppercase;
+    padding: 20px 0;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6em;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 400;
+    font-family: var(--fuenteSecundaria);
+    color: var(--colorTerciario);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+    color: var(--colorTerciario);
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h6 {
+    color: var(--colorPrimario);
+    font-family: var(--fuenteSecundaria);
+    text-transform: initial;
+    font-size: 1em;
+}
+
+p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1em;
+    font-family: var(--fuenteSecundaria);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*GLOBALES*/
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+
+/*NAVEGACION*/
+
+.barra {
+    display: flex;
+    justify-content: right;
+}
+
+.barra nav a {
+    color: var(--colorTerciario);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0 10px 0 0;
+}
+
+.barra nav a:hover {
+    color: var(--colorBoton);
+    transition: .1s ease-in;
+}
+
+.barra nav a:last-of-type {
+    margin: 0;
+}
+
+.navegacion {
+    margin-top: 10px;
+}
+
+.navegacion a i {
+    font-size: 1.6em;
+}
+
+
+/*BOTONES*/
+
+.boton {
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--colorTerciario);
+    background-color: var(--colorBoton);
+    padding: 5px;
+    margin: 5px 0 !important;
+    display: inline-block;
+    border-radius: 15px;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        padding: 10px 30px;
+    }
+}
+
+.boton:hover {
+    color: var(--colorPrimario);
+    cursor: pointer;
+}
+
+.botonEspecial {
+    text-decoration: none;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--colorTerciario);
+}
+
+.botonEspecial:hover {
+    background-color: rgba(76, 0, 255, 0.637);
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: .5s ease-in;
+}
+
+.boton-restaurar {
+    height: 25px;
+    width: 35px;
+    color: #e7dfdd;
+    background-color: #dd0c0c;
+    border: 1px solid #e1e1e1;
+}
+
+.boton-restaurar:hover {
+    background-color: #f80909;
+    cursor: pointer;
+}
+
+.boton-pagar {
+    background-color: #29d313;
+    font-family: var(--fuentePrincipal);
+    border: none;
+    border-radius: 5px;
+    padding: 7px 0;
+}
+
+.boton-pagar:hover {
+    background-color: rgb(4, 194, 4);
+    cursor: pointer;
+}
+
+.centrar-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*HEADER*/
+
+.site-header {
+    background-image: url(../img/pexels-lucie-liz-3165335.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+}
+
+@media (min-width: 768px) {
+    .contenido-header h1 {
+        font-size: 6em;
+    }
+}
+
+.contenido-header p {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.redes-sociales a i {
+    font-size: 25px;
+    color: var(--colorTerciario);
+    margin-right: 20px;
+}
+
+
+/*PRODUCTOS*/
+
+.principal-productos {
+    padding: 20px 0;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    margin: 0 15px;
+}
+
+@media (min-width: 360px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        margin: 0 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+        margin: 0 25px;
+    }
+}
+
+@media (min-width: 998px) {
+    .productos {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 25px;
+        margin: 0 25px;
+    }
+}
+
+.contenido-producto {
+    background-color: var(--colorSecundario);
+    padding: 5px;
+    border-radius: 10px;
+    justify-self: stretch;
+}
+
+.info-producto {
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+
+.info-producto span {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 10px;
+    display: inline-block;
+    color: var(--colorTerciario)
+}
+
+.info-producto p {
+    text-align: justify;
+}
+
+
+/* PARALLAX*/
+
+.parallax {
+    background-image: url(../img/pexels-fox-1038916.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 300px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.contenido-parallax {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 250px;
+}
+
+.contenido-parallax h2 {
+    margin-top: 50px;
+}
+
+.contenido-parallax p {
+    margin-left: 10px;
+    text-align: justify;
+}
+
+
+/**     CARRITO     **/
+
+.resumen-carrito {
+    background-color: var(--colorTerciario);
+    margin-top: 40px;
+    padding: 15px 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.resumen-carrito h3,
+.resumen-carrito h4 {
+    color: var(--colorPrimario);
+}
+
+.valores-carrito {
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .resumen {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
+
+.info-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .info-productos {
+        flex-direction: row;
+    }
+}
+
+.info-productos h6 {
+    margin: 0;
+}
+
+.img-carrito {
+    width: 70%;
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .img-carrito {
+        width: 30%;
+        margin-right: 40px;
+    }
+}
+
+.cantidad-productos {
+    margin: 0 0 0 10px;
+}
+
+.cantidad-productos input {
+    width: 55px;
+    margin: 0;
+}
+
+.total-pagar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.total-pagar input {
+    width: 30%;
+}
+
+@media (min-width: 768px) {
+    .total-pagar input {
+        width: 10%;
+    }
+}
+
+#total_resumen {
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+}
+
+
+/*FOOTER*/
+
+.site-footer {
+    margin-top: 40px;
+    padding: 10px 0 0 0;
+}
+
+.separador {
+    border: solid 1px var(--colorSecundario);
+    width: 100%;
+}
+
+.contenido-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .contenido-footer {
+        flex-direction: row;
+    }
+    .nosotros {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    color: var(--colorTerciario);
+    font-size: 1em;
+    font-family: var(--fuenteSecundaria);
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #040008;
+    padding: 10px 0;
+}
+
+
+/*** PAGINAS INTERNAS ***/
+
+.header-internas {
+    background-image: url(../img/pexels-lucie-liz-3165335.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.contenido-header-internas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.contenido-header-internas p {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+
+/**     CONTACTO    **/
+
+.contacto {
+    background-color: var(--colorTerciario);
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        width: 80%;
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+}
+
+legend {
+    font-family: var(--fuentePrincipal);
+    font-size: 1em;
+    font-weight: 700;
+}
+
+label {
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.1em;
+    font-weight: 400;
+    flex-basis: calc(200px - 10px);
+}
+
+.campo input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 10em;
+}
+
+
+/**     MAPA       **/
+
+.mapa {
+    margin: 60px 0 40px 0;
+    height: 250px;
+}
